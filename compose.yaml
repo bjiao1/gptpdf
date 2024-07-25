@@ -1,0 +1,10 @@
+services:
+  web: 
+    build:
+      context: . 
+    stop_signal: SIGINT
+    ports:
+      - '5000:5000'
+    environment:
+      - OPENAI_BASE_URL=https://api.openai.com/v1
+      - OPENAI_API_KEY=sk-xxxx
